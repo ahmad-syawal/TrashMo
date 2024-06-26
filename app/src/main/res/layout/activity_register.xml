@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+    <ImageView
+        android:id="@+id/bg_sync1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sync_bg"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/back_btn_register1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back_btn1"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/bg_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_title_register1"/>
+
+    <TextView
+        android:id="@+id/tv_title_register1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daftar"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_btn_register1"
+        />
+
+    <TextView
+        android:id="@+id/tv_title_register2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daftarkan dirimu dan jadi bagian dari ReFeast"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_register1"
+        app:layout_constraintStart_toStartOf="@+id/tv_title_register1"/>
+
+        <View
+        android:id="@+id/bg_register"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:background="@drawable/login_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_email_register1"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:text="E-mail"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/bg_register"
+        app:layout_constraintTop_toTopOf="@+id/bg_register" />
+
+    <EditText
+        android:id="@+id/ed_text_email_register1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_frame"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_email_register1"
+        app:layout_constraintStart_toStartOf="@+id/tv_email_register1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_email_register1" />
+
+    <TextView
+        android:id="@+id/tv_password_register1"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Kata Sandi"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/ed_text_email_register1"
+        app:layout_constraintTop_toBottomOf="@+id/ed_text_email_register1"/>
+
+    <EditText
+        android:id="@+id/ed_text_password_register1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_frame"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_password_register1"
+        app:layout_constraintStart_toStartOf="@+id/tv_password_register1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_password_register1" />
+
+    <TextView
+        android:id="@+id/tv_password_confirm_register1"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Konfirmasi Kata Sandi"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/ed_text_password_register1"
+        app:layout_constraintTop_toBottomOf="@+id/ed_text_password_register1"/>
+
+    <EditText
+        android:id="@+id/ed_text_password_confirm_register1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_frame"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_password_confirm_register1"
+        app:layout_constraintStart_toStartOf="@+id/tv_password_confirm_register1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_password_confirm_register1" />
+
+    <Button
+        android:id="@+id/btn_register1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bg_button"
+        android:backgroundTint="#22C35E"
+        android:text="Daftar"
+        app:layout_constraintEnd_toEndOf="@+id/ed_text_password_confirm_register1"
+        app:layout_constraintStart_toStartOf="@+id/ed_text_password_confirm_register1"
+        app:layout_constraintTop_toBottomOf="@+id/ed_text_password_confirm_register1"
+        app:layout_constraintBottom_toTopOf="@id/tv_terms1"/>
+
+    <TextView
+        android:id="@+id/tv_terms1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dengan mendaftar disini, kamu menyetujui Syarat & Ketentuan di ReFeast"
+        app:layout_constraintStart_toStartOf="@+id/ed_text_password_confirm_register1"
+        app:layout_constraintEnd_toEndOf="@+id/ed_text_password_confirm_register1"
+        app:layout_constraintTop_toBottomOf="@id/btn_register1"
+        app:layout_constraintBottom_toTopOf="@id/tv_terms1"/>
+
+    <TextView
+        android:id="@+id/tv_atau2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="- Atau -"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/facebook_btn2"
+        app:layout_constraintEnd_toEndOf="@+id/btn_register1"
+        app:layout_constraintStart_toStartOf="@+id/btn_register1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_terms1" />
+
+    <ImageButton
+        android:id="@+id/facebook_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button"
+        android:src="@drawable/facebook_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/google_btn2"
+        app:layout_constraintEnd_toStartOf="@+id/google_btn2"
+        app:layout_constraintStart_toStartOf="@+id/btn_register1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_atau2" />
+
+    <ImageButton
+        android:id="@+id/google_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button"
+        android:src="@drawable/google_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/facebook_btn2"
+        app:layout_constraintEnd_toStartOf="@+id/twitter_btn2"
+        app:layout_constraintStart_toEndOf="@+id/facebook_btn2"
+        app:layout_constraintTop_toTopOf="@+id/facebook_btn2" />
+
+    <ImageButton
+        android:id="@+id/twitter_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button"
+        android:src="@drawable/x_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/google_btn2"
+        app:layout_constraintEnd_toEndOf="@+id/btn_register1"
+        app:layout_constraintStart_toEndOf="@+id/google_btn2"
+        app:layout_constraintTop_toTopOf="@+id/google_btn2" />
+
+    <TextView
+        android:id="@+id/tv_login1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saya memiliki akun"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_login2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/facebook_btn2"
+        app:layout_constraintTop_toBottomOf="@+id/facebook_btn2" />
+
+    <TextView
+        android:id="@+id/tv_login2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Masuk"
+        android:textColor="#22C35E"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_login1"
+        app:layout_constraintEnd_toEndOf="@+id/twitter_btn2"
+        app:layout_constraintStart_toEndOf="@+id/tv_login1"
+        app:layout_constraintTop_toTopOf="@+id/tv_login1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
