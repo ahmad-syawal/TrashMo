@@ -12,7 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/sync_bg"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <ImageButton
         android:id="@+id/back_btn_register1"
@@ -29,10 +31,10 @@
 
     <TextView
         android:id="@+id/tv_title_register1"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="10dp"
         android:text="Daftar"
         android:textColor="@color/white"
         android:textSize="25sp"
@@ -42,15 +44,15 @@
 
     <TextView
         android:id="@+id/tv_title_register2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Daftarkan dirimu dan jadi bagian dari ReFeast"
         android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@+id/tv_title_register1"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title_register1"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_register1" />
 
     <View
         android:id="@+id/bg_register"
@@ -71,6 +73,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
         android:text="Nama Pengguna"
+        android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,6 +86,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@drawable/edit_text_frame"
+        android:textColor="@color/black"
         android:padding="12dp"
         app:layout_constraintEnd_toEndOf="@+id/tv_nama_register1"
         app:layout_constraintStart_toStartOf="@+id/tv_nama_register1"
@@ -94,6 +98,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Email"
+        android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/ed_text_nama_register1"
@@ -106,6 +111,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@drawable/edit_text_frame"
+        android:textColor="@color/black"
         android:padding="12dp"
         app:layout_constraintEnd_toEndOf="@+id/tv_email_register1"
         app:layout_constraintStart_toStartOf="@+id/tv_email_register1"
@@ -117,6 +123,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Konfirmasi Kata Sandi"
+        android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/ed_text_email_register1"
@@ -129,6 +136,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@drawable/edit_text_frame"
+        android:textColor="@color/black"
         android:padding="12dp"
         app:layout_constraintEnd_toEndOf="@+id/tv_password_register1"
         app:layout_constraintStart_toStartOf="@+id/tv_password_register1"
@@ -238,6 +246,5 @@
         app:layout_constraintEnd_toEndOf="@+id/twitter_btn2"
         app:layout_constraintStart_toEndOf="@+id/tv_login1"
         app:layout_constraintTop_toTopOf="@+id/tv_login1" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

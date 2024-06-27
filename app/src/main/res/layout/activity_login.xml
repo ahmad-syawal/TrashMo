@@ -12,7 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/sync_bg"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <ImageButton
         android:id="@+id/back_btn_login1"
@@ -34,41 +36,46 @@
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/back_btn_login1" />
 
     <TextView
         android:id="@+id/tv_title_login2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Pastikan kamu sudah pernah membuat akun ReFeast"
         android:textColor="@color/white"
         android:textSize="15sp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@id/tv_title_login1"
-        app:layout_constraintStart_toStartOf="@id/tv_title_login1"/>
+        app:layout_constraintStart_toStartOf="@id/tv_title_login1"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <View
         android:id="@+id/bg_login"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
+        android:layout_height="0dp"
         android:background="@drawable/login_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bg_sync1" />
 
     <TextView
         android:id="@+id/tv_email1"
-        android:layout_width="330dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
         android:layout_marginTop="20dp"
         android:text="E-mail"
+        android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/bg_login"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/bg_login" />
 
     <EditText
@@ -77,6 +84,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@drawable/edit_text_frame"
+        android:textColor="@color/black"
         android:padding="12dp"
         app:layout_constraintEnd_toEndOf="@id/tv_email1"
         app:layout_constraintStart_toStartOf="@id/tv_email1"
@@ -84,13 +92,15 @@
 
     <TextView
         android:id="@+id/tv_password1"
-        android:layout_width="330dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Kata Sandi"
+        android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/ed_text_email1"
+        app:layout_constraintEnd_toEndOf="@id/ed_text_email1"
         app:layout_constraintTop_toBottomOf="@id/ed_text_email1" />
 
     <EditText
@@ -99,6 +109,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@drawable/edit_text_frame"
+        android:textColor="@color/black"
         android:padding="12dp"
         app:layout_constraintEnd_toEndOf="@id/tv_password1"
         app:layout_constraintStart_toStartOf="@id/tv_password1"
