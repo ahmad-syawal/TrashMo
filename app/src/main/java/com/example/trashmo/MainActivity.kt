@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         } else {
-            val intent = Intent(this@MainActivity, Transaksi::class.java)
+            val intent = Intent(this@MainActivity, BayarIuranFragment::class.java)
             startActivity(intent)
         }
     }
