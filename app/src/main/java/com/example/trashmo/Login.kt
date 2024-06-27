@@ -31,12 +31,10 @@ class Login : AppCompatActivity() {
 
         auth = Firebase.auth
 
-        val email = binding.edTextEmail1.text.toString()
-        val password = binding.edTextPassword1.text.toString()
-
         binding.btnLogin1.setOnClickListener {
-//            login(email, password)
-            Toast.makeText(this@Login, "$email, $password", Toast.LENGTH_SHORT).show()
+            val email = binding.edTextEmail1.text.toString().trim()
+            val password = binding.edTextPassword1.text.toString().trim()
+            login(email, password)
         }
     }
 
@@ -44,8 +42,10 @@ class Login : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
+                    Toast.makeText(this@Login, "Login Success", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this@Login, MainActivity::class.java)
                     startActivity(intent)
+                    finish()
                 }
             }
     }

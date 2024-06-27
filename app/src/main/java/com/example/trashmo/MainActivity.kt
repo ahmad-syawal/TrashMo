@@ -2,13 +2,18 @@ package com.example.trashmo
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.trashmo.ui.home.HomeFragment
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -18,11 +23,18 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-    }
 
-    override fun onStart() {
-        super.onStart()
-        val intent = Intent(this@MainActivity, HomeFragment::class.java)
-        startActivity(intent)
+        val auth = Firebase.auth.currentUser
+
+        Log.d("user", "$auth")
+
+        if (auth == null) {
+            val intent = Intent(this@MainActivity, Login::class.java)
+            startActivity(intent)
+            finish()
+        } else {
+            val intent = Intent(this@MainActivity, Pengaduan::class.java)
+            startActivity(intent)
+        }
     }
 }
