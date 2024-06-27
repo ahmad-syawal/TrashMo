@@ -18,57 +18,62 @@
         android:id="@+id/back_btn_register1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/back_btn1"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/bg_button"
+        android:src="@drawable/back_btn1"
+        app:layout_constraintBottom_toTopOf="@id/tv_title_register1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/tv_title_register1"/>
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
         android:id="@+id/tv_title_register1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
         android:text="Daftar"
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:layout_marginTop="40dp"
-        android:layout_marginStart="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/back_btn_register1"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/back_btn_register1" />
 
     <TextView
         android:id="@+id/tv_title_register2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Daftarkan dirimu dan jadi bagian dari ReFeast"
         android:textColor="@color/white"
         android:textSize="15sp"
-        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_title_register1"
         app:layout_constraintTop_toBottomOf="@+id/tv_title_register1"
-        app:layout_constraintStart_toStartOf="@+id/tv_title_register1"/>
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-        <View
+    <View
         android:id="@+id/bg_register"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/login_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_register2" />
 
     <TextView
         android:id="@+id/tv_nama_register1"
-        android:layout_width="330dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
         android:text="Nama Pengguna"
         android:textSize="15sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/bg_register"
         app:layout_constraintTop_toTopOf="@+id/bg_register" />
 
@@ -85,14 +90,15 @@
 
     <TextView
         android:id="@+id/tv_email_register1"
-        android:layout_width="330dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Email"
         android:textSize="15sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/ed_text_nama_register1"
         app:layout_constraintStart_toStartOf="@+id/ed_text_nama_register1"
-        app:layout_constraintTop_toBottomOf="@+id/ed_text_nama_register1"/>
+        app:layout_constraintTop_toBottomOf="@+id/ed_text_nama_register1" />
 
     <EditText
         android:id="@+id/ed_text_email_register1"
@@ -107,14 +113,15 @@
 
     <TextView
         android:id="@+id/tv_password_register1"
-        android:layout_width="330dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Konfirmasi Kata Sandi"
         android:textSize="15sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/ed_text_email_register1"
         app:layout_constraintStart_toStartOf="@+id/ed_text_email_register1"
-        app:layout_constraintTop_toBottomOf="@+id/ed_text_email_register1"/>
+        app:layout_constraintTop_toBottomOf="@+id/ed_text_email_register1" />
 
     <EditText
         android:id="@+id/ed_text_password_register1"
@@ -135,21 +142,21 @@
         android:background="@drawable/bg_button"
         android:backgroundTint="#22C35E"
         android:text="Daftar"
+        app:layout_constraintBottom_toTopOf="@id/tv_terms1"
         app:layout_constraintEnd_toEndOf="@+id/ed_text_password_register1"
         app:layout_constraintStart_toStartOf="@+id/ed_text_password_register1"
-        app:layout_constraintTop_toBottomOf="@+id/ed_text_password_register1"
-        app:layout_constraintBottom_toTopOf="@id/tv_terms1"/>
+        app:layout_constraintTop_toBottomOf="@+id/ed_text_password_register1" />
 
     <TextView
         android:id="@+id/tv_terms1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dengan mendaftar disini, kamu menyetujui"
         android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@+id/btn_register1"
+        android:text="Dengan mendaftar disini, kamu menyetujui"
+        app:layout_constraintBottom_toTopOf="@id/tv_terms1"
         app:layout_constraintEnd_toEndOf="@+id/btn_register1"
-        app:layout_constraintTop_toBottomOf="@id/btn_register1"
-        app:layout_constraintBottom_toTopOf="@id/tv_terms1"/>
+        app:layout_constraintStart_toStartOf="@+id/btn_register1"
+        app:layout_constraintTop_toBottomOf="@id/btn_register1" />
 
     <TextView
         android:id="@+id/tv_terms2"
@@ -157,10 +164,10 @@
         android:layout_height="wrap_content"
         android:text="Syarat dan Ketentuan di ReFeast"
         android:textColor="@color/green_text"
-        app:layout_constraintTop_toBottomOf="@id/tv_terms1"
-        app:layout_constraintStart_toStartOf="@id/tv_terms1"
+        app:layout_constraintBottom_toTopOf="@id/tv_atau2"
         app:layout_constraintEnd_toEndOf="@id/tv_terms1"
-        app:layout_constraintBottom_toTopOf="@id/tv_atau2"/>
+        app:layout_constraintStart_toStartOf="@id/tv_terms1"
+        app:layout_constraintTop_toBottomOf="@id/tv_terms1" />
 
 
     <TextView
@@ -213,8 +220,8 @@
         android:id="@+id/tv_login1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Saya memiliki akun"
         android:layout_marginEnd="5dp"
+        android:text="Saya memiliki akun"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tv_login2"
         app:layout_constraintHorizontal_chainStyle="packed"

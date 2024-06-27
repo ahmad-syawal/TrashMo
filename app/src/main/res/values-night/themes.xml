@@ -3,5 +3,7 @@
     <style name="Base.Theme.TrashMo" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/green_btn</item>
+        <item name="fontFamily">@font/poppins_medium</item>
     </style>
 </resources>
