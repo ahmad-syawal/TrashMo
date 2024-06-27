@@ -7,19 +7,19 @@
         />
 
     <item
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/history_pesanan"
         android:icon="@drawable/bottombar_buy"
-        android:title="Dashboard"
+        android:title="Transaksi"
+        />
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/bottombar_activity"
+        android:title="Iuran"
         />
 
     <item
         android:id="@+id/navigation_notifications"
-        android:icon="@drawable/bottombar_activity"
-        android:title="Notifications"
-        />
-
-    <item
-        android:id="@+id/history_pesanan"
         android:icon="@drawable/bottombar_notification"
         android:title="Notifications"
         />

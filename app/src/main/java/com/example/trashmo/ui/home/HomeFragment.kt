@@ -8,7 +8,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.trashmo.History_Pengaduan
 import com.example.trashmo.Profile
+import com.example.trashmo.Transaksi
 import com.example.trashmo.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -31,6 +33,16 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.avatar.setOnClickListener {
             val intent = Intent(requireActivity(), Profile::class.java)
+            startActivity(intent)
+        }
+
+        binding.imgview2.setOnClickListener {
+            val intent = Intent(requireActivity(), Transaksi::class.java)
+            startActivity(intent)
+        }
+
+        binding.floatAduan.setOnClickListener {
+            val intent = Intent(requireActivity(), History_Pengaduan::class.java)
             startActivity(intent)
         }
     }
