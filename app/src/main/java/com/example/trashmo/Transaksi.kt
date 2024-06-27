@@ -1,15 +1,23 @@
 package com.example.trashmo
 
 import android.app.Dialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.trashmo.databinding.ActivityTransaksiBinding
+import com.example.trashmo.model.TransaksionModel
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.database
 
 class Transaksi : AppCompatActivity() {
 
@@ -21,6 +29,9 @@ class Transaksi : AppCompatActivity() {
     private lateinit var btnDialogCancel: Button
     private lateinit var btnDialogContinue: Button
 
+    private lateinit var databaseRef: DatabaseReference
+    private lateinit var authRef: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -31,6 +42,9 @@ class Transaksi : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        authRef = Firebase.auth
+        databaseRef = Firebase.database.reference
 
         checkAluminium(0)
         checkPlastik(0)
@@ -91,6 +105,7 @@ class Transaksi : AppCompatActivity() {
 
         btnDialogContinue.setOnClickListener {
             // Handle continue button action here
+            upload()
             dialog.dismiss()
         }
 
@@ -194,5 +209,27 @@ class Transaksi : AppCompatActivity() {
 
         binding.tvTotalUang.text = harga.toString()
         binding.tvTotalUang2.text = harga.toString()
+    }
+
+    private fun upload() {
+        val userId = authRef.currentUser?.uid
+        val harga = binding.tvTotalUang.text.toString()
+        val database = databaseRef.child("pesanan").child("$userId")
+        val pesananId = database.push().key!!
+        val pesanan = TransaksionModel(
+            pesananId,
+            "Plastik",
+            harga
+        )
+
+        database.child(pesananId).setValue(pesanan)
+            .addOnSuccessListener {
+                Toast.makeText(this, "Pesanan success", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, HistoryPesanan::class.java)
+                startActivity(intent)
+                finish()
+            }.addOnFailureListener {
+                Toast.makeText(this, "Pesanan gagal", Toast.LENGTH_SHORT).show()
+            }
     }
 }
