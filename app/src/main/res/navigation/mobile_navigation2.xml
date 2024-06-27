@@ -22,4 +22,9 @@
         android:name="com.example.trashmo.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <activity
+        android:id="@+id/history_pesanan"
+        android:name="com.example.trashmo.HistoryPesanan"
+        android:label="activity_history_pesanan"
+        tools:layout="@layout/activity_history_pesanan" />
 </navigation>

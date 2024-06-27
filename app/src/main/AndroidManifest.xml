@@ -27,7 +27,7 @@
             android:name=".CameraActivity"
             android:exported="false" />
         <activity
-            android:name=".History_pesanan"
+            android:name=".HistoryPesanan"
             android:exported="false" />
         <activity
             android:name=".History_Pengaduan"
