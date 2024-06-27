@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".IuranFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_iuran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/back_btn_iuran"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_arrow_back_24"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_title_iuran"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_title_iuran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Iuran Sampah"
+                android:textSize="20sp"
+                android:layout_marginStart="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="@+id/back_btn_iuran"
+                app:layout_constraintStart_toEndOf="@+id/back_btn_iuran"
+                app:layout_constraintBottom_toBottomOf="@+id/back_btn_iuran"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_title_pembayaran_terakhir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pembayaran Terakhir"
+        android:textColor="@color/green_text"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/card_iuran"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_history_pembayaran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_pembayaran_terakhir"
+        app:layout_constraintStart_toStartOf="@id/tv_title_pembayaran_terakhir">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/history_pembayaran_ico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pembayaran_history_ico"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <!-- Name of the payment -->
+            <TextView
+                android:id="@+id/tv_nama_iuran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kasmin Mahmud"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintStart_toEndOf="@id/history_pembayaran_ico"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/history_pembayaran_ico"
+                app:layout_constraintBottom_toTopOf="@id/tv_lokasi_iuran" />
+
+            <!-- Location of the payment -->
+            <TextView
+                android:id="@+id/tv_lokasi_iuran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Makassar"
+                app:layout_constraintStart_toStartOf="@+id/tv_nama_iuran"
+                app:layout_constraintTop_toBottomOf="@id/tv_nama_iuran"
+                app:layout_constraintBottom_toTopOf="@id/id_iuran" />
+
+            <!-- ID of the payment -->
+            <TextView
+                android:id="@+id/id_iuran"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="M2345678"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintStart_toStartOf="@+id/tv_nama_iuran"
+                app:layout_constraintTop_toBottomOf="@id/tv_lokasi_iuran"
+                app:layout_constraintBottom_toBottomOf="@id/history_pembayaran_ico" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_title_daftar_tersimpan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daftar tersimpan"
+        android:textColor="@color/green_text"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/card_history_pembayaran"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.search.SearchBar
+        android:id="@+id/searcbar_iuran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Cari nama disini"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_daftar_tersimpan" />
+
+    <TextView
+        android:id="@+id/tv_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Belum ada daftar"
+        android:layout_marginTop="30dp"
+        android:textColor="#A6A6A6"
+        app:layout_constraintTop_toBottomOf="@id/searcbar_iuran"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_pembayaran_baru"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pembayaran baru"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/button_bg2"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
