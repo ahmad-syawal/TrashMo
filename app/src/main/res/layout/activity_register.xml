@@ -61,16 +61,38 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/tv_email_register1"
+        android:id="@+id/tv_nama_register1"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
-        android:text="E-mail"
+        android:text="Nama Pengguna"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/bg_register"
         app:layout_constraintTop_toTopOf="@+id/bg_register" />
+
+    <EditText
+        android:id="@+id/ed_text_nama_register1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_frame"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_nama_register1"
+        app:layout_constraintStart_toStartOf="@+id/tv_nama_register1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nama_register1" />
+
+    <TextView
+        android:id="@+id/tv_email_register1"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Email"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/ed_text_nama_register1"
+        app:layout_constraintTop_toBottomOf="@+id/ed_text_nama_register1"/>
 
     <EditText
         android:id="@+id/ed_text_email_register1"
@@ -88,7 +110,7 @@
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Kata Sandi"
+        android:text="Konfirmasi Kata Sandi"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/ed_text_email_register1"
@@ -105,28 +127,6 @@
         app:layout_constraintStart_toStartOf="@+id/tv_password_register1"
         app:layout_constraintTop_toBottomOf="@+id/tv_password_register1" />
 
-    <TextView
-        android:id="@+id/tv_password_confirm_register1"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Konfirmasi Kata Sandi"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/ed_text_password_register1"
-        app:layout_constraintTop_toBottomOf="@+id/ed_text_password_register1"/>
-
-    <EditText
-        android:id="@+id/ed_text_password_confirm_register1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/edit_text_frame"
-        android:padding="12dp"
-        app:layout_constraintEnd_toEndOf="@+id/tv_password_confirm_register1"
-        app:layout_constraintStart_toStartOf="@+id/tv_password_confirm_register1"
-        app:layout_constraintTop_toBottomOf="@+id/tv_password_confirm_register1" />
-
     <Button
         android:id="@+id/btn_register1"
         android:layout_width="0dp"
@@ -135,9 +135,9 @@
         android:background="@drawable/bg_button"
         android:backgroundTint="#22C35E"
         android:text="Daftar"
-        app:layout_constraintEnd_toEndOf="@+id/ed_text_password_confirm_register1"
-        app:layout_constraintStart_toStartOf="@+id/ed_text_password_confirm_register1"
-        app:layout_constraintTop_toBottomOf="@+id/ed_text_password_confirm_register1"
+        app:layout_constraintEnd_toEndOf="@+id/ed_text_password_register1"
+        app:layout_constraintStart_toStartOf="@+id/ed_text_password_register1"
+        app:layout_constraintTop_toBottomOf="@+id/ed_text_password_register1"
         app:layout_constraintBottom_toTopOf="@id/tv_terms1"/>
 
     <TextView
