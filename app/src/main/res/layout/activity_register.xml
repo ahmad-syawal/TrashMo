@@ -149,6 +149,7 @@
         android:layout_marginTop="25dp"
         android:background="@drawable/bg_button"
         android:backgroundTint="#22C35E"
+        app:backgroundTint="@null"
         android:text="Daftar"
         app:layout_constraintBottom_toTopOf="@id/tv_terms1"
         app:layout_constraintEnd_toEndOf="@+id/ed_text_password_register1"

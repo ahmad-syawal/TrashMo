@@ -134,6 +134,7 @@
         android:background="@drawable/bg_button"
         android:backgroundTint="#22C35E"
         android:text="Masuk"
+        app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="@id/ed_text_password1"
         app:layout_constraintStart_toStartOf="@id/ed_text_password1"
         app:layout_constraintTop_toBottomOf="@id/tv_forgetpass1" />

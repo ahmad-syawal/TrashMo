@@ -181,6 +181,7 @@
         android:backgroundTint="#22C35E"
         android:text="Kirim"
         android:textColor="@color/white"
+        app:backgroundTint="@null"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

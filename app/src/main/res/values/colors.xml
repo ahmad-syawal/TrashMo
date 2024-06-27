@@ -7,4 +7,6 @@
     <color name="grey_btn">#D9D9D9</color>
     <color name="grey_text">#757575</color>
     <color name="frame_bg">#F7F7F7</color>
+    <color name="green_btn_pressed">#00CC00</color> <!-- Contoh: Warna hijau lebih gelap saat ditekan -->
+    <color name="green_btn_disabled">#C8C8C8</color> <!-- Contoh: Warna abu-abu saat dinonaktifkan -->
 </resources>

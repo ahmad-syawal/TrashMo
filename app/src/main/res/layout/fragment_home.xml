@@ -443,6 +443,7 @@
             android:layout_margin="16dp"
             android:src="@drawable/aduan_ico"
             android:backgroundTint="@color/green_btn"
+            app:backgroundTint="@null"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
