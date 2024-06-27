@@ -4,4 +4,9 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="plastik">Plastik</string>
+    <string name="harga_jual">Rp 1.500/Kg</string>
+    <string name="kardus">Kardus</string>
+    <string name="aluminium">Aluminium</string>
+    <string name="kaca">Kaca</string>
 </resources>
