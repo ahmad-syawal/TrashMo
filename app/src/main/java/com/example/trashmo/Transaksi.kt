@@ -1,7 +1,9 @@
 package com.example.trashmo
 
+import android.app.Dialog
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +16,10 @@ class Transaksi : AppCompatActivity() {
     private lateinit var binding: ActivityTransaksiBinding
     private lateinit var hargaPlastik: TextView
     private lateinit var hargaAluminium: TextView
+
+    private lateinit var dialog: Dialog
+    private lateinit var btnDialogCancel: Button
+    private lateinit var btnDialogContinue: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -68,41 +74,56 @@ class Transaksi : AppCompatActivity() {
         }
 
         binding.btnPengajuan.setOnClickListener {
-
+            showDialog()
         }
-
     }
 
+    private fun showDialog() {
+        dialog = Dialog(this)
+        dialog.setContentView(R.layout.custom_dialog_box)
+
+        btnDialogCancel = dialog.findViewById(R.id.btn_ask_cancel)
+        btnDialogContinue = dialog.findViewById(R.id.btn_ask_continue)
+
+        btnDialogCancel.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        btnDialogContinue.setOnClickListener {
+            // Handle continue button action here
+            dialog.dismiss()
+        }
+
+        dialog.show()
+    }
 
     private fun addPlastik() {
         var berat = binding.tvBeratPlastik.text.toString().toInt()
         val harga = 1500
-        berat+=1
+        berat += 1
         binding.tvBeratPlastik.text = berat.toString()
         checkPlastik(berat)
         val total = berat * harga
         binding.tvJumlahPlastik.text = berat.toString()
         binding.tvHargaItem1.text = total.toString()
-
     }
 
     private fun addAluminium() {
         var berat = binding.tvBeratAluminium.text.toString().toInt()
         val harga = 1500
-        berat+=1
+        berat += 1
         checkAluminium(berat)
         val total = berat * harga
         binding.tvBeratAluminium.text = berat.toString()
         binding.tvJumlahAluminium.text = berat.toString()
         binding.tvHargaItem2.text = total.toString()
-
     }
 
     private fun minPlastik() {
         var berat = binding.tvBeratPlastik.text.toString().toInt()
         val harga = 1500
 
-        berat-=1
+        berat -= 1
         if (berat < 0) {
             berat = 0
         }
@@ -119,7 +140,7 @@ class Transaksi : AppCompatActivity() {
         var berat = binding.tvBeratAluminium.text.toString().toInt()
         val harga = 1500
 
-        berat-=1
+        berat -= 1
         if (berat < 0) {
             berat = 0
         }

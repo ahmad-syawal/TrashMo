@@ -1,19 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/bottombar_home"
-        android:title="Home" />
+        android:title="Home"
+        />
+
     <item
         android:id="@+id/navigation_dashboard"
         android:icon="@drawable/bottombar_buy"
-        android:title="Dashboard" />
+        android:title="Dashboard"
+        />
+
     <item
         android:id="@+id/navigation_notifications"
         android:icon="@drawable/bottombar_activity"
-        android:title="Notifications" />
+        android:title="Notifications"
+        />
+
     <item
         android:id="@+id/history_pesanan"
         android:icon="@drawable/bottombar_notification"
-        android:title="Notifications" />
+        android:title="Notifications"
+        />
 </menu>

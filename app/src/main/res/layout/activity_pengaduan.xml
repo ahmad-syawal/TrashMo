@@ -9,17 +9,19 @@
 
     <ImageView
         android:id="@+id/image_profile"
-        android:layout_width="33dp"
+        android:layout_width="46dp"
         android:layout_height="46dp"
+
         android:layout_marginStart="12dp"
         app:layout_constraintStart_toEndOf="@+id/iv_back"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_back"
+        app:layout_constraintBottom_toBottomOf="@id/iv_back"
         app:srcCompat="@drawable/profilkicik" />
 
     <ImageView
         android:id="@+id/iv_back"
-        android:layout_width="26dp"
-        android:layout_height="16dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -132,9 +134,10 @@
         android:layout_marginEnd="24dp"
         android:background="@drawable/pinggiran"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="textMultiLine"
         android:padding="8dp"
         android:text=""
+        android:gravity="top|start"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

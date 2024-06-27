@@ -83,31 +83,32 @@
 
                         <ImageView
                             android:id="@+id/imgview1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
                             android:src="@drawable/noto_coin"
-                            android:layout_gravity="center_vertical"
-                            android:padding="10dp"/>
+                            android:layout_gravity="center_vertical" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
                             android:layout_gravity="center_vertical"
-                            android:paddingStart="10dp">
+                            android:layout_marginStart="10dp">
 
                             <TextView
                                 android:id="@+id/textView1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="ReFeast Pay"/>
+                                android:text="Rp 230.000 "
+                                android:textColor="@color/green_text"/>
 
                             <TextView
                                 android:id="@+id/textView2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="1000 Point"
-                                android:paddingTop="5dp"/>
+                                android:textColor="@color/green_text"
+                                />
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -128,7 +129,7 @@
                             android:id="@+id/imgview2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/noto_coin"
+                            android:src="@drawable/jual_sampah_ico"
                             android:layout_gravity="center_vertical"
                             android:padding="10dp"/>
 
@@ -143,14 +144,7 @@
                                 android:id="@+id/textView3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="vouchers"/>
-
-                            <TextView
-                                android:id="@+id/textView4"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="230.000"
-                                android:paddingTop="5dp"/>
+                                android:text="Jual Sampah"/>
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -174,7 +168,7 @@
             android:gravity="start"
             app:layout_constraintTop_toBottomOf="@+id/textView5"
             app:layout_constraintStart_toStartOf="@id/cardview2"
-            app:layout_constraintEnd_toEndOf="@id/cardview2">
+            app:layout_constraintEnd_toEndOf="@id/cardview2"/>
 
             <!-- Title TextView -->
             <TextView
@@ -440,5 +434,16 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </GridLayout>
+
+        <!-- Floating Action Button -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/float_aduan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/aduan_ico"
+            android:backgroundTint="@color/green_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
