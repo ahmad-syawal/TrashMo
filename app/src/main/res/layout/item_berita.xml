@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_berita1"
+            android:layout_width="105dp"
+            android:layout_height="70dp"
+            android:src="@drawable/berita1"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/title_platform"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detik Sulsel"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@id/title_berita"
+            app:layout_constraintStart_toEndOf="@id/img_berita1"
+            app:layout_constraintTop_toTopOf="@id/img_berita1"/>
+
+        <TextView
+            android:id="@+id/title_berita"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Heboh sampah berserakan di jalan pantai losari"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintTop_toBottomOf="@id/title_platform"
+            app:layout_constraintStart_toStartOf="@id/title_platform"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/logo_berita"/>
+
+        <ImageView
+            android:id="@+id/logo_berita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_berita"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintTop_toBottomOf="@id/title_berita"
+            app:layout_constraintStart_toStartOf="@id/title_berita"
+            app:layout_constraintBottom_toBottomOf="@id/img_berita1"/>
+        
+        <TextView
+            android:id="@+id/name_publisher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nur Ainun"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/logo_berita"
+            app:layout_constraintTop_toTopOf="@id/logo_berita"
+            app:layout_constraintBottom_toBottomOf="@id/logo_berita"/>
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="28 Jan 2024"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/name_publisher"
+            app:layout_constraintTop_toTopOf="@id/name_publisher"
+            app:layout_constraintBottom_toBottomOf="@id/name_publisher"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
