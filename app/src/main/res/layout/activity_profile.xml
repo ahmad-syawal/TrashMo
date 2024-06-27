@@ -186,7 +186,6 @@
         android:src="@drawable/help_ico"
         android:layout_marginTop="40dp"
         app:layout_constraintTop_toBottomOf="@+id/notif_ico1"
-        app:layout_constraintBottom_toTopOf=""
         app:layout_constraintStart_toStartOf="@+id/notif_ico1"/>
 
     <TextView
@@ -226,7 +225,6 @@
         android:src="@drawable/about_ico"
         android:layout_marginTop="40dp"
         app:layout_constraintTop_toBottomOf="@+id/help_ico1"
-        app:layout_constraintBottom_toTopOf=""
         app:layout_constraintStart_toStartOf="@+id/help_ico1"/>
 
     <TextView

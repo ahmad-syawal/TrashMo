@@ -37,8 +37,7 @@
         android:layout_marginTop="40dp"
         android:layout_marginStart="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/back_btn_login1"
-        app:layout_constraintBottom_toTopOf="tv"/>
+        app:layout_constraintTop_toBottomOf="@id/back_btn_login1" />
 
     <TextView
         android:id="@+id/tv_title_login2"

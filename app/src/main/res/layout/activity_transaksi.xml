@@ -615,7 +615,7 @@
                     android:layout_marginEnd="5dp"
                     app:layout_constraintTop_toTopOf="@id/tv_biaya_admin"
                     app:layout_constraintBottom_toBottomOf="@id/tv_biaya_admin"
-                    app:layout_constraintEnd_toStartOf="@id/tv_harga_item3"
+                    app:layout_constraintEnd_toStartOf="@id/tv_harga_item3"/>
 
                 <TextView
                     android:id="@+id/tv_harga_item3"
