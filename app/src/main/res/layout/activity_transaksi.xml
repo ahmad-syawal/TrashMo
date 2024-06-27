@@ -17,7 +17,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginStart="20dp"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/ic_placeholder"
+        tools:srcCompat="@drawable/profile_pic"
         app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
@@ -38,7 +38,7 @@
         android:layout_marginHorizontal="20dp"
         android:layout_height="105dp"
         app:layout_constraintTop_toBottomOf="@id/avatar"
-        tools:srcCompat="@drawable/ic_placeholder"
+        tools:srcCompat="@drawable/transaksi_bg"
         app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
