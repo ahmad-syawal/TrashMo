@@ -13,6 +13,9 @@
         android:theme="@style/Theme.TrashMo"
         tools:targetApi="31">
         <activity
+            android:name=".Pengaduan"
+            android:exported="false" />
+        <activity
             android:name=".Transaksi"
             android:exported="false" />
         <activity
