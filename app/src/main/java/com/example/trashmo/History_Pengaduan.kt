@@ -1,5 +1,6 @@
 package com.example.trashmo
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -43,6 +44,12 @@ class History_Pengaduan : AppCompatActivity() {
 
         val layoutManager = LinearLayoutManager(this)
         binding.rvHistoryAduan.layoutManager = layoutManager
+
+        binding.addAduan.setOnClickListener {
+            val intent = Intent(this, Pengaduan::class.java)
+            startActivity(intent)
+
+        }
 
         getData()
     }

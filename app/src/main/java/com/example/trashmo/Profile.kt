@@ -1,5 +1,6 @@
 package com.example.trashmo
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -34,6 +35,24 @@ class Profile : AppCompatActivity() {
         val id = auth.currentUser?.uid.toString()
         database = Firebase.database.reference.child("user").child(id)
         displayData()
+
+        binding.backArrow1.setOnClickListener {
+            finish()
+        }
+
+        binding.tvLogout.setOnClickListener {
+            auth.signOut()
+            val intent = Intent(this, Login::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        binding.imgLogout.setOnClickListener {
+            auth.signOut()
+            val intent = Intent(this, Login::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     private fun displayData() {

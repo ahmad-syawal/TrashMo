@@ -36,6 +36,11 @@ class Login : AppCompatActivity() {
             val password = binding.edTextPassword1.text.toString().trim()
             login(email, password)
         }
+
+        binding.tvRegister2.setOnClickListener {
+            val intent = Intent(this, Register::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun login(email: String, password: String) {
