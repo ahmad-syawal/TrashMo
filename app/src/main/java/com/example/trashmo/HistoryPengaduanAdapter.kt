@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.ListAdapter
+import com.bumptech.glide.Glide
 import com.example.trashmo.databinding.ItemHistoryAduanBinding
 import com.example.trashmo.model.AduanModel
 
@@ -12,9 +13,11 @@ class HistoryPengaduanAdapter: ListAdapter<AduanModel, HistoryPengaduanAdapter.M
 
     inner class MyViewHolder(val binding: ItemHistoryAduanBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(aduan: AduanModel) {
-            binding.titleAduan1.text = aduan.jenis
+            binding.titleAduan1.text = aduan.judul
             binding.tvDescJalan.text = aduan.lokasi
-            binding.fotoSampah1.setImageResource(aduan.gambar)
+            Glide.with(binding.root)
+                .load(aduan.gambar)
+                .into(binding.fotoSampah1)
         }
     }
 

@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         } else {
-            val intent = Intent(this@MainActivity, Transaksi::class.java)
+            val intent = Intent(this@MainActivity, History_Pengaduan::class.java)
             startActivity(intent)
         }
     }

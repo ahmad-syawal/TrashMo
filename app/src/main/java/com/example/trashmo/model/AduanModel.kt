@@ -1,9 +1,9 @@
 package com.example.trashmo.model
 
 data class AduanModel(
-    val id: String,
-    val jenis: String,
-    val deskripsi: String,
-    val lokasi: String,
-    val gambar: Int
+    val id: String ?= null,
+    val judul: String ?= null,
+    val deskripsi: String ?= null,
+    val lokasi: String?= null,
+    val gambar: String ?= null
 )
