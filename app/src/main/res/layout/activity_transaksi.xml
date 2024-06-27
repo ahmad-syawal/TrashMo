@@ -706,9 +706,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Total Pendapatan"
-                    android:layout_marginEnd="20dp"
+                    android:layout_marginEnd="0dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="@id/btn_pengajuan"
+                    app:layout_constraintEnd_toStartOf="@id/btn_pengajuan"
                     app:layout_constraintTop_toTopOf="@+id/btn_pengajuan"/>
 
                 <TextView
