@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         } else {
-            val intent = Intent(this@MainActivity, Pengaduan::class.java)
+            val intent = Intent(this@MainActivity, Profile::class.java)
             startActivity(intent)
         }
     }
