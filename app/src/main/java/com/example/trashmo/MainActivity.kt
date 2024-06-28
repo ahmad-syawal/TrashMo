@@ -38,8 +38,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         } else {
-            val intent = Intent(this@MainActivity, BayarIuranFragment::class.java)
-            startActivity(intent)
+//            val intent = Intent(this@MainActivity, BayarIuranFragment::class.java)
+//            startActivity(intent)
         }
     }
 }

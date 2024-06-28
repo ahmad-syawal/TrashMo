@@ -47,6 +47,7 @@ class BayarIuranFragment : Fragment() {
 
         binding.btnBayarSekarang.setOnClickListener {
             // Handle your payment logic here
+
         }
     }
 
