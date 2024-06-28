@@ -83,7 +83,8 @@
         android:id="@+id/tv_iuran_loc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pilih Wilayah"
+        android:text="Makassar"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/title_iuran_loc"
         app:layout_constraintTop_toBottomOf="@id/title_iuran_loc"
         app:layout_constraintBottom_toBottomOf="@id/iuran_loc"/>
@@ -132,8 +133,10 @@
     <EditText
         android:id="@+id/tv_iuran_id"
         android:layout_width="0dp"
-        android:layout_height="20dp"
-        android:hint="Nomor Pelangan"
+        android:layout_height="wrap_content"
+        android:text="M2345678"
+        android:textStyle="bold"
+        android:background="@null"
         app:layout_constraintStart_toStartOf="@+id/title_iuran_id"
         app:layout_constraintEnd_toEndOf="@id/long_line"
         app:layout_constraintTop_toBottomOf="@id/title_iuran_id"
@@ -174,7 +177,8 @@
         android:id="@+id/tv_iuran_money"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pilih Wilayah"
+        android:text="Metode Pembayaran"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/title_iuran_money"
         app:layout_constraintTop_toBottomOf="@id/title_iuran_money"
         app:layout_constraintBottom_toBottomOf="@id/iuran_money"/>
