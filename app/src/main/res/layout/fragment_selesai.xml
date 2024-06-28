@@ -37,7 +37,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/item_pesanan1"
             app:layout_constraintTop_toTopOf="@id/item_pesanan1"
-            tools:text="Plastik dan aluminium" />
+            android:text="Plastik dan aluminium" />
 
         <ImageView
             android:id="@+id/maps_point2"
