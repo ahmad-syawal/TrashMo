@@ -31,5 +31,37 @@
         android:id="@+id/bayarIuranFragment"
         android:name="com.example.trashmo.BayarIuranFragment"
         android:label="fragment_bayar_iuran"
-        tools:layout="@layout/fragment_bayar_iuran" />
+        tools:layout="@layout/fragment_bayar_iuran" >
+        <action
+            android:id="@+id/action_bayarIuranFragment_to_iuranPinFragment"
+            app:destination="@id/iuranPinFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/iuranFragment"
+        android:name="com.example.trashmo.IuranFragment"
+        android:label="fragment_iuran"
+        tools:layout="@layout/fragment_iuran" >
+        <action
+            android:id="@+id/action_iuranFragment_to_bayarIuranFragment"
+            app:destination="@id/bayarIuranFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/iuranPinFragment"
+        android:name="com.example.trashmo.IuranPinFragment"
+        android:label="fragment_iuran_pin"
+        tools:layout="@layout/fragment_iuran_pin" >
+        <action
+            android:id="@+id/action_iuranPinFragment_to_pembayaranBerhasilFragment"
+            app:destination="@id/pembayaranBerhasilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pembayaranBerhasilFragment"
+        android:name="com.example.trashmo.PembayaranBerhasilFragment"
+        android:label="fragment_pembayaran_berhasil"
+        tools:layout="@layout/fragment_pembayaran_berhasil" >
+        <action
+            android:id="@+id/action_pembayaranBerhasilFragment_to_iuranFragment"
+            app:destination="@id/iuranFragment"
+            app:popUpTo="@id/iuranFragment" />
+    </fragment>
 </navigation>

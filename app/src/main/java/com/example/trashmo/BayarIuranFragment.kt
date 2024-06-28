@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.trashmo.databinding.FragmentBayarIuranBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
@@ -28,6 +29,10 @@ class BayarIuranFragment : Fragment() {
             requireActivity().onBackPressed()
         }
 
+        binding.btnBayarSekarang.setOnClickListener {
+            findNavController().navigate(R.id.action_bayarIuranFragment_to_iuranPinFragment)
+        }
+
         val bottomSheetDialog = BottomSheetDialog(requireContext())
         val bottomSheetView = layoutInflater.inflate(R.layout.bottom_sheet_dialog1, null)
 
@@ -43,10 +48,6 @@ class BayarIuranFragment : Fragment() {
 
         binding.tvIuranMoney.setOnClickListener {
             bottomSheetDialog.show()
-        }
-
-        binding.btnBayarSekarang.setOnClickListener {
-            // Handle your payment logic here
 
         }
     }
